@@ -9,6 +9,5 @@ $(document).ready(function() {
       tabs.forEach(function(tab) {
         console.log('title: ', tab.title);
     });
-
-  
+   });
 });
