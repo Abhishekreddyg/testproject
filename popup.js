@@ -1,13 +1,11 @@
-$(document).ready(function() {
+chrome.tabs.query({}, function(tabs) {
+    var title= "titles:";
   
-  var queryInfo = {
-    active: true,
-  };
-
-  chrome.tabs.query(queryInfo, function(tabs) {
-    
       tabs.forEach(function(tab) {
         console.log('title: ', tab.title);
-    });
-   });
+         title +=  tab.title + '<br>'; 
+    }); 
+   
+  tDisplay = document.getElementById('showtitle');
+  tDisplay.innerHTML = title;
 });
