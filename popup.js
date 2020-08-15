@@ -10,8 +10,5 @@ $(document).ready(function() {
         console.log('title: ', tab.title);
     });
 
-    $('#status').text('title = '+title);
-
-  });
   
 });
